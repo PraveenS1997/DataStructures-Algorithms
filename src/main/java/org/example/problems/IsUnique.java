@@ -2,16 +2,15 @@ package org.example.problems;
 
 import java.util.HashSet;
 
-public class Problems {
-    /*
-     * Implement an algorithm to determine if a string has all unique characters.
-     * What if you cannot use additional data structures?
-     */
-    public static void isUnique(){
+/*
+ * Implement an algorithm to determine if a string has all unique characters.
+ * What if you cannot use additional data structures?
+ */
+public class IsUnique {
+    public static void bruteForce(String str){
         // brute-force approach
         // tc - O(N)
         // sc - O(N)
-        String str = "abc";
         HashSet<Character> set = new HashSet<>();
 
         for(int i=0; i<str.length(); i++){
@@ -20,7 +19,9 @@ public class Problems {
 
         if(set.size() == str.length()) System.out.println("String is unique");
         else System.out.println("String is not unique");
+    }
 
+    public static void sorting(String str){
         // second approach - sorting
         // tc - O(NlogN)
         // sc - O(1)
@@ -33,10 +34,12 @@ public class Problems {
                 return;
             }
         }
-        // third approach - bit manipulation (best way)
-        // tc - O(N)
-        // sc - O(1)
+    }
 
+    // third approach - bit manipulation (best way)
+    // tc - O(N)
+    // sc - O(1)
+    public static void bestSolution(String str){
         // checker integer has 32 bits in it, use those 32 bits as an array
         // initially all the 32 bits are set to 0
         int checker  = 0;
