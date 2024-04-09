@@ -17,8 +17,10 @@ public class IsUnique {
             set.add(str.charAt(i));
         }
 
-        if(set.size() == str.length()) System.out.println("String is unique");
-        else System.out.println("String is not unique");
+        if(set.size() == str.length())
+            System.out.println("String is unique");
+        else
+            System.out.println("String is not unique");
     }
 
     public static void sorting(String str){
@@ -34,6 +36,7 @@ public class IsUnique {
                 return;
             }
         }
+        System.out.println("String is unique");
     }
 
     // third approach - bit manipulation (best way)
