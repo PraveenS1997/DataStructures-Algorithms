@@ -48,7 +48,7 @@ public class IsUnique {
         int checker  = 0;
         for(int i=0; i<str.length(); i++){
             // map the char ascii value to the range of (0-26)
-            int bitPosition = str.charAt(i) % 'a';
+            int bitPosition = str.charAt(i) % 'a'; // str.charAt(i) - 'a'
 
             // check if the position'th bit is already set in checker
             // if yes, duplicate is present in the given string

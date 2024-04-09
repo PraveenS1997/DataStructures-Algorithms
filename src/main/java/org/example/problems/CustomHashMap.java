@@ -1,13 +1,13 @@
-package org.example;
+package org.example.problems;
 
-public class HashMap<T, K> {
-    private Node<T, K>[] array;
+public class CustomHashMap<T, K> {
+    private final Node<T, K>[] array;
 
-    public HashMap() {
-        array = new Node[16];
+    public CustomHashMap() {
+        this(16);
     }
 
-    public HashMap(int size) {
+    public CustomHashMap(int size) {
         array = new Node[size];
     }
 
