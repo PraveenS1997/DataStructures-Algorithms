@@ -164,5 +164,78 @@ public class Patterns {
             }
             System.out.println();
         }
+
+        System.out.println("-----------------------------");
+
+        /* When N = 4
+         ********
+         ***  ***
+         **    **
+         *      *
+
+         * # of lines in the output = N
+         * # of characters in each line = (2*N)
+         * # of stars at the start is equal to # of stars at the end
+         * When line = 1, # of stars on one side = 4, N = 4
+         * When line = 2, # of stars on one side = 3, N = 4
+         * When line = 3, # of stars on one side = 2, N = 4
+         * When line = 4, # of stars on one side = 1, N = 4
+         * Formula to calculate # of stars on one side = (N-i+1)
+         * N = # of stars + # of spaces
+         * # of spaces = N - # of stars
+         * Formula to calculate # of spaces on side = (N - # of stars)
+         *
+         * Another observation,
+         * When line = 1, # of spaces in between is 0
+         * When line = 2, # of spaces in between is 2
+         * When line = 3, # of spaces in between is 4
+         * When line = 4, # of spaces in between is 6
+         * Formula to calculate # of spaces in between = ((line - 1) * 2)
+         */
+
+        for(int i=1; i<=N; i++){
+            int stars = N-i+1;
+            int spaces = N - stars;
+            for(int a=1; a<=stars; a++){
+                System.out.print("*");
+            }
+            for(int a=1; a<=(spaces*2); a++){
+                System.out.print(" ");
+            }
+            for(int a=1; a<=stars; a++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println("-----------------------------");
+
+        /* When N = 4
+            *
+           ***
+          *****
+         *******
+
+         * # of lines in the output = N
+         * # of characters in each line = (2*N-1)
+         * # of stars on each line is always in odd => (i * 2 - 1)
+         * # of spaces on each line => (# of chars in each line - # of stars on each line) / 2
+         */
+
+        int M = 2 * N -1;
+        for(int i=1; i<=N; i++){
+            int stars = 2 * i - 1;
+            int spaces = (M - stars) >> 1;
+            for(int a=1; a<=spaces; a++){
+                System.out.print(" ");
+            }
+            for(int a=1; a<=stars; a++){
+                System.out.print("*");
+            }
+            for(int a=1; a<=spaces; a++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }
