@@ -2,7 +2,7 @@ package org.example.problems;
 
 public class Patterns {
 
-    public static void printStairCasePattern(){
+    public static void patternProblems(){
         /* When N = 5
          *
          * *

@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.problems.CustomHashMap;
-import org.example.problems.IsUnique;
 import org.example.problems.Patterns;
 
 public class Main {
@@ -19,6 +17,6 @@ public class Main {
         IsUnique.sorting(str);
         IsUnique.bruteForce(str);*/
 
-        Patterns.printStairCasePattern();
+        Patterns.patternProblems();
     }
 }
