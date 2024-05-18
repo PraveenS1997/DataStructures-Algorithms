@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.problems.Patterns;
+import org.example.problems.Patterns2;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Main {
         IsUnique.sorting(str);
         IsUnique.bruteForce(str);*/
 
-        Patterns.patternProblems();
+        //Patterns.patternProblems();
+        Patterns2.patternProblems();
     }
 }
